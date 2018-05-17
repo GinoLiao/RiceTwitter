@@ -1,0 +1,58 @@
+
+<!--index page-->
+<div class="page-container">
+    <div class="row">
+		<!--registration side bar-->
+		<div class="col-md-1"></div>	<!--leave blank on the left side-->
+		<div class="col-md-7">
+			<div class="registration-sidebar registration-text" id="userSideBar">
+				<p class="text text-primary">Registration</p>
+				<form id="myform">
+				Account name: (Account name should only contain letters and numbers and may not start with a number.2-20 characters)<br>
+				<input type="AccountName" class="form-control text-field" name="accountName" id="accname" 
+				placeholder="2-20 characters" pattern="^[a-zA-Z][a-zA-Z0-9]{1,20}$"	
+				ng-model="lg.usernameInput" required>
+				<br>
+				Email Address:(xxx@xxx.xxx,excluding"-")<br>
+				<input type="email" class="form-control text-field" name="emailAddress" id="emailaddr" 
+				placeholder="eg. a@b.c" ng-model="lg.emailInput" required>
+				<br>
+				Zip code:(5-digit zip code)<br>
+				<input type="ZipCode" class="form-control text-field" name="zipCode" id="zip" 
+				placeholder="eg. 12345" pattern="\d{5}" ng-model="lg.zipcodeInput"required>
+				<br>
+				User password:<br>
+				<input type="password" class="form-control text-field" name="password" id="pwd" 
+				ng-model="lg.pwdInput" required>
+				<br>
+				Password confirmation:<br>
+				<input type="password" class="form-control text-field" name="passwordConfirmation" id="pwdConfirm" 
+				ng-model="lg.pwdConfirmInput" required>
+				<br><br>
+				<p id="registerMsg">{{lg.registerMsg}}</p>
+					
+				<input type="submit" id="registerBtn" class = "btn btn-info" value="Register" 
+				ng-click="lg.register(lg.usernameInput, lg.emailInput, lg.zipcodeInput, lg.pwdInput, lg.pwdConfirmInput)">
+				<input type="reset" class = "btn btn-info" value="Clear">
+				<a class = "btn btn-primary pull-xs-right" href='https://zl15backend.herokuapp.com/auth'>Facebook Login</a>
+				</form>
+			</div>
+		</div>
+		<!--main content-->
+		<div class="col-md-3">
+            <div class="login-sidebar">
+				<p class="text text-primary">Login</p>
+				<p class="text">Account Name: <input type="text" ng-model='lg.username' class="form-control text-field" id="accNameLogin" value="" required></p>
+				<p class="text">Password: <input type="password" ng-model='lg.password' class="form-control text-field" id="pwdLogin" required></p>
+				<p><input type="submit" id="loginBtn" class = "btn btn-info pull-xs-left" ng-click='lg.login()' value="Login">
+					<input type="submit" id="logoutBtn" class = "btn btn-danger pull-xs-right" ng-click='lg.logout()' value="Logout"></p><br><br>
+				<div id="loginMsg">
+				  {{ lg.message }}
+				</div>
+				<br><br>
+				<a class = "btn btn-primary pull-xs-right" href='https://zl15backend.herokuapp.com/auth'>Facebook Login</a>
+			</div>
+		</div>
+		<div class="col-md-1"></div>	<!--leave blank on the right side-->
+	</div>
+</div>

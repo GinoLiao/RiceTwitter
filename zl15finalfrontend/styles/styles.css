@@ -1,0 +1,189 @@
+
+/*my own css styles*/
+.back-color{
+	background-color:#E5E4E2
+}
+
+
+/* Profile container */
+.profile {
+  margin: 20px 0;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+  padding: 0.25em;
+  background-color: #EBF4FA;
+}
+
+.img {
+    margin: 1em;
+	padding: 1em;
+    width: 90%;
+}
+
+.card-color{
+	background-color:#e5ffff
+}
+
+
+.headline {
+	text-align: center;
+	font: italic bold 1em Georgia, serif;
+}
+
+.author {
+	text-align: center;
+	font: bold 1em Georgia, serif;
+}
+
+.username {
+	text-align: center;
+	font: bold 1em arial, serif;
+}
+
+.posts-title{
+	font: bold 1em arial, serif;
+}
+
+.text-field {
+	border: 2px solid white; 
+	padding: 0.25em; 
+	background: white;
+	background-attachment: scroll;
+	background-position: 100% 50%; 
+	background-repeat: no-repeat;
+	display:inline-block;
+}
+
+
+.follower {
+	margin: 1em;
+	margin-left:0;
+	width: 100%;	
+	padding: 1em;
+	border: 1px solid blue;
+	font: 100% arial, sans-serif;
+	background-color:#ffff99
+}
+
+.post {
+	margin: 1em;
+	margin-left:0;
+	width: 100%;	
+	padding: 1em;
+	border: 2px #b3ffff;
+	font: 100% arial, sans-serif;
+	background-color:#e5ffff
+}
+
+
+.comment {
+	margin: 0.5em;
+	margin-left:0;
+	width: 100%;	
+	padding: 0.5em;
+	font: 100% arial, sans-serif;
+	background-color:#b3ffff
+}
+
+.profile-image {
+
+	margin-left:3em;
+	width: 10%;	
+	border: 2px solid blue;
+	background-color:#e5ffff
+}
+
+.textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+
+
+.main-content {
+  padding: 20px;
+  background: #EBF4FA;
+  min-height: 460px;
+}
+
+
+
+
+.login-sidebar {
+  padding: 20px;
+  background: #EBF4FA;
+  min-height: 750px;
+}
+
+.registration-sidebar {
+  padding-top: 2em;
+  padding-left: 7em;
+  padding-right: 7em;
+  background-color: #EBF4FA;
+  min-height: 750px;
+}
+
+
+
+.profile-back-color {
+  background-color: #EBF4FA;
+}
+
+.text {
+	font: 130% arial, sans-serif;
+}
+
+.registration-text {
+	font: 100% arial, sans-serif;
+}
+
+
+input[type="file"] {
+    display: none;
+}
+.image-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.hidden{
+	display:none
+}
+
+.float-right{
+	float:right
+}
+
+.overflow-hidden{
+	overflow:hidden
+}
+
+.padding-r{
+	padding-right:2em
+}
+
+.editPostWidth{
+	width:92%;
+}
+
+.editCommentWidth{
+	width:88%;
+}
+
+.addCommentWidth{
+	width:89%;
+}
+.inline-block{
+	display:inline-block;
+}

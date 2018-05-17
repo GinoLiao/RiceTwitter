@@ -1,0 +1,20 @@
+<div class="profile-sidebar" id="followersSideBar"  ng-controller="followingCtrl as vm">
+	<p class="headline" id="folowers">Followers</p>
+	<div class="form-inline ">
+		<input class="form-control text-field" type="text" id="newFollowerInput" placeholder="User" ng-model="vm.newFollower">
+		<button class="btn btn-info" id="addFollowerBtn" ng-click="vm.addFollowing(vm.newFollower)">Add</button>
+		<div>{{vm.message}}</div>
+	</div>
+	<br>
+	
+	<div class="card card-color" id="followingMember" ng-repeat="follower in vm.followers">
+		<img class="card-img-top center-block" ng-src="{{follower.img}}" alt="Card image cap" width="20%">
+		<div class="card-block">
+			<h4 class="card-title" id="folowerName">{{follower.name}} 
+			<button class="btn btn-primary pull-xs-right" id="unfollowBtn" ng-click="vm.removeFollowing(follower.name)">Unfollow</button></h4>
+			<p class="card-text">{{follower.status}}</p>
+
+		</div>
+	</div>
+	
+</div>

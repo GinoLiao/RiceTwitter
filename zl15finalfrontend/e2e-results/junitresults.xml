@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="frontend End to End Exercise" timestamp="2016-03-25T00:51:30" hostname="localhost" time="22.117" errors="0" tests="10" skipped="0" disabled="0" failures="0">
+  <testcase classname="frontend End to End Exercise" name="should register a new user" time="3.565" />
+  <testcase classname="frontend End to End Exercise" name="should log in as my test user and validate my status message" time="1.624" />
+  <testcase classname="frontend End to End Exercise" name="should create a new post and validate the post appears in the feed" time="2.245" />
+  <testcase classname="frontend End to End Exercise" name="should update the status headline and verify the change" time="2.167" />
+  <testcase classname="frontend End to End Exercise" name="should add the user &quot;Follower&quot; to the list of followed users and verify the count increases by one" time="2.226" />
+  <testcase classname="frontend End to End Exercise" name="should remove the user &quot;Follower&quot; from the list of followed users and verify the count decreases by one" time="2.131" />
+  <testcase classname="frontend End to End Exercise" name="should search for &quot;Only One Post Like This&quot; and verify only one post shows, and verify the author" time="2.135" />
+  <testcase classname="frontend End to End Exercise" name="should update the user&apos;s email and verify" time="2.254" />
+  <testcase classname="frontend End to End Exercise" name="should update the user&apos;s zipcode and verify" time="2.188" />
+  <testcase classname="frontend End to End Exercise" name="should update the user&apos;s password, verify a &quot;will not change&quot; message is returned" time="1.556" />
+ </testsuite>
+</testsuites>

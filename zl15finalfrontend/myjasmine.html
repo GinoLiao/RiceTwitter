@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Testing RiceBook</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine-html.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/boot.js"></script>
+
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-route.js"></script>  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-resource.js"></script>
+	<script src="https://code.angularjs.org/1.4.6/angular-mocks.js"></script>
+	
+	<script src="app/app.js"></script>
+	<script src="app/apiMock.js"></script>
+	<script src="app/services/apiSrv.js"></script>
+	<script src="app/services/userSrv.js"></script>
+	<script src="app/login/loginCtrl.js"></script>
+	<script src="app/status/headlineCtrl.js"></script>
+	<script src="app/post/postsCtrl.js"></script>
+	<script src="app/post/postsFilter.js"></script>
+	<!--<script src="app/profile/profileCtrl.js"></script>-->
+	
+	
+	<script src="app/login/loginCtrl.spec.js"></script>
+	<script src="app/status/headlineCtrl.spec.js"></script>
+	<script src="app/post/postsCtrl.spec.js"></script>
+	<!--<script src="app/profile/profileCtrl.spec.js"></script>-->
+	<!--<script src="app/post/postsFilter.spec.js"></script> haven't figure out how to test filter...-->
+	
+</head>
+<body>
+<!-- Jasmine's test report -->
+<div id="HTMLReporter" class="jasmine_reporter"></div>
+</body>
+</html>
+

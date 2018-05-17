@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="Validate Status Functionality" errors="0" tests="1" failures="0" time="0.65" timestamp="2016-03-24T20:58:57">
+  <testcase classname="Validate Status Functionality" name="should update the status for the loggedInUser" time="0.647"></testcase>
+</testsuite>
+</testsuites>

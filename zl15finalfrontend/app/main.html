@@ -1,0 +1,36 @@
+
+
+
+<div class="back-color">
+
+<div class="page-container">
+    <div class="row">
+		<!--side bar-->
+		<div class="col-md-3">
+			<!--user profile status headlin bar-->
+			<div class="profile-sidebar" id="userSideBar">
+				
+				<div ng-include="'app/status/headline.html'"></div>
+				 
+				<br>
+			</div>
+			<br>
+			<!--follower bar-->
+			<div ng-include="'app/following/following.html'"></div>
+		</div>
+		<!--main content-->
+		<div class="col-md-9">
+		
+            <div class="main-content">
+				<div ng-include="'app/post/posts.html'"></div>	
+            </div>
+		</div> <!--end main content-->
+	</div>
+</div>
+
+
+
+
+
+
+</div>

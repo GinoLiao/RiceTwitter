@@ -1,0 +1,54 @@
+
+<div class="main-content" ng-controller="postsCtrl as vm">
+	<div class="card back-color" id="newpost">
+		<textarea class="textarea" placeholder="New Post!" ng-model="vm.newPostBody" id="newPostBody"></textarea>
+		<button class="btn btn-info" ng-click="vm.addPost(vm.newPostBody)" id="newPostBtn">Post</button>
+		<button class="btn btn-info">Cancel</button>
+
+		<label for="img-upload" class="label label-pill label-info pull-xs-right image-upload">
+			Upload Image
+		</label>
+		<input id="img-upload" type="file" accept="image/*"
+			onchange="angular.element(this).scope().vm.setFile(this)">		
+		<!--css style hides this field and only the label above is shown to have button only style-->
+	</div>
+
+	<p class="posts-title">Posts:</p>
+	<div class="form">
+		<input class="form-control text-field" ng-model="vm.searchPosts" id="search" type="text" placeholder="Search Posts by author/body">
+	</div>
+
+	<div>
+		<!--filtered by author only now, can be switched to by body only or together(input text is in either one of the field:author/body)-->
+		<div class="post" ng-repeat="mypost in vm.posts | filterNamePostText:vm.searchPosts | orderBy: '-date'"> <!-- | filterPostText:searchPosts -->
+			<p><i class="headline">{{"On " + mypost.date + ", "}}</i> 
+			<b class="postAuthor">{{mypost.author}}</b> <i class="headline">posted:</i></p>
+			<figure class="img">
+				<img ng-src="{{mypost.img}}" width="100%">
+			</figure>
+			<p id="postBody">{{mypost.body}}</p>
+			<p><button id="{{'showEditPostBtn' + mypost.id}}" class="btn btn-info pull-xs-right"ng-click="vm.showEditPost(mypost.id)">Edit Post</button></p><br><br><br>
+			<div id="{{'editPostDiv' + mypost.id}}" class="hidden">
+			<input class="form-control text-field editPostWidth" ng-model="vm.postInput" id="editPostInput" type="text" placeholder="Edit Post">
+			<button class="btn btn-info" ng-click="vm.editPost(vm.postInput, mypost.id)">Edit Post</button>
+			</div><br>
+			<div class="comment" ng-repeat="comment in mypost.comments">
+				<p>{{comment.author + ": " + comment.body}}<br>
+					{{comment.date}}
+				<button id="{{'showEditCommentBtn' + comment.commentId}}" class="btn btn-info pull-xs-right" ng-click="vm.showEditComment(comment.commentId)">Edit Comment</button>
+				</p><br>
+				<div id="{{'editCommentP' + comment.commentId}}" class="hidden">
+				<input class="form-control text-field editCommentWidth" ng-model="vm.editCommentInput" id="editCommentInput" type="text" placeholder="Edit Comment">
+				<button class="btn btn-info pull-xs-right"ng-click="vm.editPost(vm.editCommentInput, mypost.id, comment.commentId)">Edit Comment</button>
+				<br><br></div>
+			</div>
+			<br>
+			<div>
+			<input class="form-control text-field addCommentWidth" ng-model="vm.addCommentInput" type="text" placeholder="Add Comment">
+			<button class="btn btn-info" ng-click="vm.editPost(vm.addCommentInput, mypost.id, -1)">Add Comment</button>
+			</div>
+			<br>
+		</div>
+	</div>
+
+</div>

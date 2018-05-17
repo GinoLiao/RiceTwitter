@@ -1,0 +1,54 @@
+
+
+<div class="profile-back-color">
+<!-- profile details and text fields -->
+	<p class="text">Profile Image: 
+	<div class="profile-image" >
+			<img src="{{vm.picture}}" width="100%">
+	</div><br>
+	<label for="img-upload" class="label label-pill label-info image-upload">
+		Upload Image
+	</label>
+	<input id="img-upload" type="file" accept="image/*"
+			onchange="angular.element(this).scope().vm.setFile(this)">
+	<button id="updateProfilePicBtn" class="btn btn-primary" ng-click="vm.setPicture()">Update Profile Picture</button>
+	<!--css style hides this field and only the label above is shown to have button only style-->
+<br>
+
+	<p class="hidden">Display Name: <span id="dispName">{{vm.username}}</span><br> 
+		<input type="text" class="text-field" id="dispNameInput" value="">
+	</p>
+	<p class="text">Email Address: <span id="emailAddr">{{vm.email}}</span><br> 
+		<input type="email" placeholder="eg. a@b.c" class="text-field" id="emailAddrInput" ng-model="vm.newEmailInput">
+		<button id="updateEmailBtn" class="btn btn-primary" ng-click="vm.setEmail(vm.newEmailInput)">Update Email</button>
+	</p>
+	<p class="text">Zip Code: <span id="zip">{{vm.zip}}</span><br>
+		<input type="ZipCode" pattern="\d{5}" placeholder="eg. 12345" class="text-field" id="zipInput" ng-model="vm.newZipInput">
+		<button id="updateZipBtn" class="btn btn-primary" ng-click="vm.setZip(vm.newZipInput)">Update Zipcode</button>
+	</p>
+	<p class="text">Password <span id="pwd" value=""></span><br>
+		<input type="password"  class="text-field" id="pwdInput" ng-model="vm.pwdInput">
+	</p>
+	<p class="text">Password Confirmation <span id="pwdConfirm"></span><br>
+		<input type="password" class="text-field" id="pwdConfirmInput" ng-model="vm.pwdConfirmInput">
+		<button id="updatePwdBtn" class="btn btn-primary" ng-click="vm.setPassword(vm.pwdInput, vm.pwdConfirmInput)">Update Password</button>
+	</p>
+	<p id="updateProfileMsg">{{vm.message}}</p>
+	<p><button id="linkAccBtn" class="btn btn-primary hidden" ng-click="vm.linkAccountDisplay()">Link Account</button></p>
+	<div id='unlinkAccDiv' class='hidden'>
+	<p><button id="unlinkAccBtn" class="btn btn-primary" ng-click="vm.unlinkAccount()">Unlink Account</button></p>
+		{{ vm.unlinkMsg }}
+	</div>
+	<div id="linkAccDiv" class="login-sidebar hidden">
+		<p class="text text-primary">Link Account</p>
+		<p class="text">Account Name: <input type="text" ng-model='vm.linkusername' class="form-control text-field" id="accNameLink" value="" required></p>
+		<p class="text">Password: <input type="password" ng-model='vm.linkpassword' class="form-control text-field" id="pwdLink" required></p>
+		<p><input type="submit" id="linkBtn" class = "btn btn-info pull-xs-left" ng-click='vm.linkAccount()' value="Link Now"></p><br><br>
+		<div id="linkMsg">
+		  {{ vm.linkMsg }}
+		</div>
+	</div>
+
+
+
+</div>

@@ -1,0 +1,10 @@
+				
+<div class="form-inline" ng-controller="headlineCtrl as vm">
+	<figure class="img">
+		<img ng-src="{{vm.picture}}" width="100%">
+	</figure>
+	<p class="username" id="myname">{{vm.username}}</p>
+	<p class="headline" id="headline">{{vm.headlineStatus}}</p>
+	<input class="form-control text-field" id="headlineInput" ng-model="vm.headlineStatus" type="text" id="updateStatustxt" placeholder="Update status!">
+	<button class="btn btn-info" id="updateStatusBtn" ng-click="vm.setStatus(vm.headlineStatus)">Update</button>
+</div>
